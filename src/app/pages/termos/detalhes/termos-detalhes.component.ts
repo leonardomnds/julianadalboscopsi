@@ -1,11 +1,12 @@
 import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { CurrencyPipe } from "@angular/common";
 import { FaIconComponent } from "@fortawesome/angular-fontawesome";
-import { ActivatedRoute, Router } from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 import { TermoService } from "@shared/services/aviso/termo.service";
 import { diaSemanaDescricao, frequenciaPagamentoDescricao, TermoParams } from "@shared/services/aviso/dto";
 import { environment } from "@env";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { WINDOW } from "@shared/injection-tokens";
 
 @Component({
   standalone: true,
@@ -20,7 +21,7 @@ export class TermosDetalhesComponent implements OnInit {
 
   icons = ICONS;
 
-  private router = inject(Router);
+  private window = inject(WINDOW);
   private route = inject(ActivatedRoute);
   private termoService = inject(TermoService);
 
@@ -61,7 +62,10 @@ export class TermosDetalhesComponent implements OnInit {
     const avisoParams = this.termoService.getParamsFromTermoId(id);
 
     if (!avisoParams) {
-      this.router.navigate(['/'], { replaceUrl: true });
+      if (this.window?.location.href) {
+        this.window.location.href = environment.siteUrl;
+      }
+
       return;
     }
 

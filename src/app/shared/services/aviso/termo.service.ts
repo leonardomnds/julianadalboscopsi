@@ -18,7 +18,7 @@ export class TermoService {
       this.padLeft(params.horarioMarcado.minuto, 2),
     ].join('');
 
-    return `${this._siteUrl}/termos/${avisoId}`;
+    return `${this._siteUrl}/${avisoId}`;
   }
 
   getParamsFromTermoId(avisoId: string | null): TermoParams | null {

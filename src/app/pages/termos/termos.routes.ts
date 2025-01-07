@@ -18,7 +18,7 @@ export const termosRoutes: Routes = [
       },
       {
         path: '**',
-        redirectTo: '/',
+        redirectTo: '/0',
         pathMatch: 'full'
       }
     ]

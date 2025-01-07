@@ -7,16 +7,12 @@ export const contentRoutes: Routes = [
     component: ContentComponent,
     children: [
       {
-        path: '',
-        loadChildren: () => import('@pages/home/home.routes').then((r) => r.homeRoutes),
-      },
-      {
-        path: 'termos',
-        loadChildren: () => import('@pages/termos/termos.routes').then((r) => r.termosRoutes),
-      },
-      {
         path: 'form',
         loadChildren: () => import('@pages/ficha-cadastral/ficha-cadastral.routes').then((r) => r.fichaCadastralRoutes),
+      },
+      {
+        path: '',
+        loadChildren: () => import('@pages/termos/termos.routes').then((r) => r.termosRoutes),
       },
       {
         path: '**',
