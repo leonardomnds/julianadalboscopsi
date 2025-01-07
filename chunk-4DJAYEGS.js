@@ -1,0 +1,1 @@
+import{Y as t}from"./chunk-YNQPVTDE.js";var o={production:!0,siteUrl:"https://julianadalboscopsi.com.br",whatsappUrl:"https://wa.me/+5541995753482",clarityKey:"",googleAdsKey:""};var r=new t("SITE_URL"),p=new t("WINDOW");export{o as a,r as b,p as c};

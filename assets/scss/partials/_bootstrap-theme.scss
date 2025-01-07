@@ -1,0 +1,52 @@
+@import 'variables';
+
+/* Personalização do Bootstrap */
+
+/* Body */
+$line-height-base:  1.4;
+$body-bg:           $body-bg-color;
+$body-color:        $body-text-color;
+
+/* Negative Margin */
+$enable-negative-margins: true;
+
+$min-contrast-ratio: 2.0;
+
+$theme-colors: (
+  "verde-escuro": $verde-escuro,
+  "verde-claro": $verde-claro,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger
+);
+
+/* Link */
+$link-color:                        $body-color !default;
+
+/* Tooltip */
+$tooltip-bg:                        $verde-escuro;
+$tooltip-max-width:                 400px;
+
+
+/* Card */
+$card-bg:                           #fff; /* <- Bug versão 5.2 */
+
+/* Modal */
+$modal-content-bg:                  #fff;
+
+/* List Group */
+$list-group-bg:                     #fff; /* <- Bug versão 5.2 */
+
+:root {
+  --header-height: 100px;
+
+  --verde-escuro: #{$verde-escuro};
+  --verde-escuro-rgb: #{$verde-escuro-rgb};
+
+  --verde-claro: #{$verde-claro};
+  --verde-claro-rgb: #{$verde-claro-rgb};
+
+  --body-bg-color: #{$body-bg-color};
+  --body-text-color: #{$body-text-color};
+}
