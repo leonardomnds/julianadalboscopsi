@@ -1,0 +1,114 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html, body {
+  height: 100vh;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+// Scroll personalizado
+.styled-scroll-y {
+  $scrollbar-bg: rgba(0, 0, 0, 0.2);
+  $scrollbar-width: 8px;
+
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-bg;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: calc($scrollbar-width / 2);
+    background: $scrollbar-bg;
+  }
+}
+
+.ng-dropdown-panel .scroll-host {
+  @extend .styled-scroll-y;
+}
+
+a,
+.btn.btn-link {
+  text-decoration: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+// Containers das páginas
+.page-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  border: none;
+  color: var(--body-text-color);
+  background-color: #fff;
+}
+
+p {
+  word-break: normal;
+  overflow-wrap: normal;
+  white-space: normal;
+}
+
+body [data-clarity-id] {
+  &:not(.no-clarity) {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.print-area {
+  display: none;
+}
+
+label.required:after {
+  content: "\00a0*";
+  color: #dd5861;
+}
+
+form {
+  .form-control.ng-invalid,
+  .input-group:has(.form-control.ng-invalid),
+  .ng-invalid > .form-control,
+  .ng-invalid > .input-group > .form-control,
+  .ng-invalid {
+    @extend .is-invalid;
+  }
+
+  .ng-invalid > .invalid-feedback {
+    display: block;
+  }
+}
+
+.form-control,
+.form-select {
+  &,
+  &:focus,
+  &:active {
+    background-color: var(--bs-tertiary-bg);
+  }
+}
