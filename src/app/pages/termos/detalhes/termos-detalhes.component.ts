@@ -62,7 +62,7 @@ export class TermosDetalhesComponent implements OnInit {
     const avisoParams = this.termoService.getParamsFromTermoId(id);
 
     if (!avisoParams) {
-      if (this.window?.location.href) {
+      if (this.window?.location?.href) {
         this.window.location.href = environment.siteUrl;
       }
 

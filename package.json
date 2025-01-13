@@ -5,9 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "serve": "ng serve --configuration localhost",
-    "build": "ng build --configuration production --base-href=\"/julianadalboscopsi/\"",
+    "build": "ng build --configuration production --base-href=\"/\"",
     "update:sitemap": "node sitemap.js",
-    "deploy:ghpages": "angular-cli-ghpages --dir=dist/browser --branch=gh-pages",
+    "deploy:ghpages": "angular-cli-ghpages --dir=dist/browser --branch=gh-pages --cname=termos.julianadalboscopsi.com.br",
     "deploy": "npm run build && npm run update:sitemap && npm run deploy:ghpages"
   },
   "private": true,
