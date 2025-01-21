@@ -77,7 +77,3 @@ Para integrar o Microsoft Clarity ao projeto, siga os passos descritos na [docum
 ## Licença
 
 Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-Espero que este site seja útil e proporcione uma ótima experiência aos visitantes e clientes da psicóloga Manoella Larissa. Se tiver qualquer dúvida ou sugestão, sinta-se à vontade para entrar em contato!
